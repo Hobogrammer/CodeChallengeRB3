@@ -1,0 +1,2 @@
+class ViewPagesController < ApplicationController
+end
