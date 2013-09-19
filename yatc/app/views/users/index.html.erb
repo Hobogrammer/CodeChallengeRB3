@@ -1,0 +1,28 @@
+<div class="user_list">
+  <ol>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Screen Name</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><li><%= user.handle %></td>
+            <td><%= user.first_name %></td>
+            <td><%= user.last_name %></td>
+            <td><%= user.email %></td>
+            <td><%= link_to "delete", user, method: :delete, data: { confirm: "Do you really want to delete this user?" } %></td>
+            <td><%= link_to "edit", edit_user_path(user.id) %></td></li>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </ol>
+</div>
