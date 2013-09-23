@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  #has_many :posts
+  has_many :posts
 
   validates :handle, presence: true
   validates :first_name, presence: true

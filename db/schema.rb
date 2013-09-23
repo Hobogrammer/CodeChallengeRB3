@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919001803) do
+ActiveRecord::Schema.define(version: 20130923124720) do
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.integer  "uid"
+    t.integer  "opid"
+    t.boolean  "reblog",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "handle"

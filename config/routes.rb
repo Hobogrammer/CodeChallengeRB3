@@ -14,7 +14,11 @@ root to: 'users#index'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :users 
+  resources :users, :posts 
+
+  resources :users do
+    resources :posts
+  end
 
   # Example resource route with options:
   #   resources :products do
